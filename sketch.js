@@ -35,6 +35,12 @@ function draw() {
             // p/f = 100
 
             if (current == 2) {
+                newForest[i][j] = 3;
+            } else if (current == 3) {
+                newForest[i][j] = 4;
+            } else if (current == 4) {
+                newForest[i][j] = 5;
+            } else if (current == 5) {
                 newForest[i][j] = 0;
             } else if (current == 1 && fireNearby) {
                 newForest[i][j] = 2;
@@ -74,8 +80,15 @@ function fillGrid() {
             } else if (forest[i][j] == 0) {
                 fill(0);
                 // 2 is burning
-            } else {
+            } else if (forest[i][j] == 2) {
                 fill(255, 0, 0);
+                // 3, 4 and 5 are fire trails
+            } else if (forest[i][j] == 3) {
+                fill(255, 0, 0, 190);
+            } else if (forest[i][j] == 4) {
+                fill(255, 0, 0, 100);
+            } else if (forest[i][j] == 5) {
+                fill(255, 0, 0, 40);
             }
             ellipse(i * w, j * w, w, w);
         }
