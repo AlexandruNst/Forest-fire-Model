@@ -1,4 +1,4 @@
-var sqPerLine = 100;
+var sqPerLine = 50;
 
 var forest;
 var newForest;
@@ -90,7 +90,7 @@ function fillGrid() {
             } else if (forest[i][j] == 5) {
                 fill(255, 0, 0, 40);
             }
-            ellipse(i * w, j * w, w, w);
+            ellipse(i * w + w / 2, j * w + w / 2, w, w);
         }
     }
 }
